@@ -155,7 +155,7 @@ int truismNumber[] ={ 83, 48, 18, 27, 85, 62, 13, 97, 51, 29, 45, 22, 37, 6, 2, 
 MD_Parola P = MD_Parola(HARDWARE_TYPE, DATA_PIN, CLK_PIN, CS_PIN, MAX_DEVICES);
 
 // Scrolling parameters
-uint8_t scrollSpeed = 35;    // default frame delay value
+uint8_t scrollSpeed = 40;    // default frame delay value
 textEffect_t scrollEffect = PA_SCROLL_LEFT;
 textPosition_t scrollAlign = PA_LEFT;
 //uint16_t scrollPause = 2000; // in milliseconds
@@ -177,7 +177,7 @@ void setup()
 
   // Initialize message subsystem
   P.begin();
-  P.setIntensity(9);
+  P.setIntensity(1);  //0 to 15
   P.displayText(curMessage, scrollAlign, scrollSpeed, scrollPause, scrollEffect, scrollEffect);
   
 }
